@@ -28,6 +28,3 @@
   color: #42b983;
 }
 </style>
-<!-- Comment1 -->
-
-
