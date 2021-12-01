@@ -1,10 +1,10 @@
 <template>
   <div class="content">
-    <h3>This is {{mode}} mode</h3>
+    <h3>This is the official Site of Shopping List</h3>
     <div class="image-grid">
     </div>
     <p class="para">
-     Hallo Malik
+     Hallo
     </p>
   </div>
 </template>
