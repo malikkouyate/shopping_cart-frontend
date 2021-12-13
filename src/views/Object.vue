@@ -1,10 +1,10 @@
 <template>
-  <h1>Einfach Links</h1>
+  <h1>Einfach Objekte</h1>
 </template>
 
 <script>
 export default {
-  name: 'Link'
+  name: 'Object'
 }
 </script>
 
