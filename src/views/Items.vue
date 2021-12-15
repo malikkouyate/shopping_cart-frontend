@@ -4,11 +4,11 @@
     <div class="row row-cols-1 row-cols-md-4 g-4">
       <div class="col" v-for="objects in items" :key="objects.id">
         <div class="card h-100">
-          <img :src="getAvatar(objects)" class="card-img-top" :alt="'Item'">
+          <img :src="getAvatar(objects)" class="card-img-top" :alt="objects.link">
           <div class="card-body">
             <h5 class="card-title">{{objects.link}} </h5>
             <p class="card-text">
-              Das Objekt hat die ID: {{objects.id}} und kostet: {{objects.price}}€
+              Das Objekt hat die ID: {{objects.id}} kostet: {{objects.price}}€
             </p>
           </div>
         </div>
@@ -28,26 +28,23 @@ export default {
   methods: {
     getAvatar (objects) {
       if (objects.id === 1) {
-        return require('../assets/logo.png')
+        return require('../assets/Malik-2.png')
       } else if (objects.id === 2) {
-        return require('../assets/logo.png')
+        return require('../assets/Malik-1.png')
       } else if (objects.id === 7) {
-        return require('../assets/logo.png')
+        return require('../assets/Malik-3.png')
       }
     }
   },
   mounted () {
-    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + 'api/v1/registration/objects'
     const myHeaders = new Headers()
     myHeaders.append('Cookie', 'JSESSIONID=7674B867043F08F0A4A716BDB7C48F4C')
-
     const requestOptions = {
       method: 'GET',
       headers: myHeaders,
       redirect: 'follow'
     }
-
-    fetch(endpoint, requestOptions)
+    fetch('https://shoppingcartdrip01.herokuapp.com/api/v1/registration/objects', requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(objects => {
         this.items.push(objects)
@@ -58,5 +55,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
