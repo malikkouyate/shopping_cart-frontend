@@ -38,6 +38,7 @@ export default {
   },
   mounted () {
     const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + 'api/v1/registration/objects'
+    //
     const myHeaders = new Headers()
     myHeaders.append('Cookie', 'JSESSIONID=7674B867043F08F0A4A716BDB7C48F4C')
 
