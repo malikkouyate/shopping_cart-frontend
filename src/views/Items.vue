@@ -37,7 +37,7 @@ export default {
     }
   },
   mounted () {
-    // const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + 'api/v1/registration/objects'
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + 'api/v1/registration/objects'
     const myHeaders = new Headers()
     myHeaders.append('Cookie', 'JSESSIONID=7674B867043F08F0A4A716BDB7C48F4C')
 
@@ -47,7 +47,7 @@ export default {
       redirect: 'follow'
     }
 
-    fetch('https://shoppingcartdrip01.herokuapp.com/api/v1/registration/objects', requestOptions)
+    fetch(endpoint, requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(objects => {
         this.items.push(objects)
