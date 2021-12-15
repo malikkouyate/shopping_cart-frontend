@@ -6,7 +6,7 @@
         <div class="card h-100">
           <img :src="getAvatar(objects)" class="card-img-top" :alt="objects.id">
           <div class="card-body">
-            <h5 class="card-title">{{objects.link}} </h5>
+            <h5 class="card-title">{{objects.id}} </h5>
             <p class="card-text">
               Das Objekt hat die ID: {{objects.id}} kostet: {{objects.price}}€
             </p>
