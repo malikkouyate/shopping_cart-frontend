@@ -47,7 +47,7 @@ export default {
       redirect: 'follow'
     }
 
-    fetch('https://shoppingcart-frontend01.herokuapp.com/api/v1/registration/objects', requestOptions)
+    fetch('https://shoppingcartdrip01.herokuapp.com/api/v1/registration/objects', requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(objects => {
         this.items.push(objects)
