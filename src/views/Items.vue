@@ -104,15 +104,16 @@ export default {
   methods: {
     getAvatar (objects) {
       if (objects.id === 1) {
-        return require('../assets/Malik-2.png')
+        return require('../assets/logo.png')
       } else if (objects.id === 2) {
-        return require('../assets/Malik-1.png')
+        return require('../assets/logo.png')
       } else if (objects.id === 7) {
-        return require('../assets/Malik-3.png')
+        return require('../assets/logo.png')
       }
     }
   },
   mounted () {
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + 'api/v1/registration/objects'
     const myHeaders = new Headers()
     myHeaders.append('Cookie', 'JSESSIONID=7674B867043F08F0A4A716BDB7C48F4C')
     const requestOptions = {
@@ -120,7 +121,7 @@ export default {
       headers: myHeaders,
       redirect: 'follow'
     }
-    fetch('https://shoppingcartdrip01.herokuapp.com/api/v1/registration/objects', requestOptions)
+    fetch(endpoint, requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(objects => {
         this.items.push(objects)
