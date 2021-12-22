@@ -26,7 +26,7 @@
 <!--        <img src="../assets/Malik-3.png" class="w-25 center h-25" alt="...">-->
 <!--      </div>-->
 <!--      <div class="carousel-item">-->
-<!--        <field-message src="../views/test.vue">Hallo</field-message>-->
+<!--        <field-message src="">Hallo</field-message>-->
 <!--      </div>-->
 <!--    </div>-->
 <!--    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"-->
