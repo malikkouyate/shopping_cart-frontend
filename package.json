@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "node": "16.13",
-    "npm":  "8.1.2"
+    "npm": "8.1.2"
   },
   "scripts": {
     "start": "vue-cli-service serve",
@@ -16,7 +16,7 @@
     "@growthbunker/vuedarkmode": "^0.5.56",
     "bootstrap": "^5.1.3",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0",
+    "vue": "^3.2.26",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
